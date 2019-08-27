@@ -6,7 +6,7 @@ class Car(models.Model):
 	model = models.CharField(max_length=120)
 	year = models.IntegerField()
 	added_in = models.DateTimeField(auto_now_add=True ,null=True)
-	car_img = models.ImageField(null=True)
+	car_img = models.ImageField(null=True, blank=True)
 
 	def __str__(self):
 		return "{} {} - {}".format(self.make, self.model, self.year)
